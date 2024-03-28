@@ -1,0 +1,52 @@
+/* Estilo para o contêiner do formulário de cadastro */
+.cadastro {
+  max-width: 400px; /* Largura máxima do formulário */
+  margin: 20px auto; /* Centraliza o formulário horizontalmente */
+  padding: 20px; /* Espaçamento interno */
+  border: 1px solid #ccc; /* Borda */
+  border-radius: 8px; /* Bordas arredondadas */
+  background-color: #fff; /* Cor de fundo */
+}
+
+/* Estilo para os elementos do formulário */
+.cadastro label {
+  display: block; /* Coloca os rótulos em uma nova linha */
+  margin-bottom: 5px; /* Espaçamento entre os rótulos e os campos */
+}
+
+.cadastro input[type="text"],
+.cadastro input[type="password"] {
+  width: calc(100% - 22px); /* Ocupa toda a largura disponível */
+  padding: 10px; /* Espaçamento interno */
+  margin-bottom: 15px; /* Espaçamento inferior entre os campos */
+  border: 1px solid #ccc; /* Borda */
+  border-radius: 4px; /* Bordas arredondadas */
+  box-sizing: border-box; /* Garante que o padding não afete a largura total */
+}
+
+/* Estilo para os botões */
+.cadastro button {
+  padding: 10px 20px; /* Espaçamento interno */
+  margin-right: 10px; /* Espaçamento à direita */
+  border: none; /* Sem borda */
+  border-radius: 4px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor do mouse */
+}
+
+.cadastro button[type="submit"] {
+  background-color: #4CAF50; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto */
+}
+
+.cadastro button[type="submit"]:hover {
+  background-color: #1a6b13; /* Cor de fundo do botão ao passar o mouse */
+}
+
+.cadastro button[type="button"] {
+  background-color: #6c757d; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto */
+}
+
+.cadastro button[type="button"]:hover {
+  background-color: #5a6268; /* Cor de fundo do botão ao passar o mouse */
+}

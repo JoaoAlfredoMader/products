@@ -1,0 +1,73 @@
+/* Estilização do contêiner principal */
+.home {
+  padding: 20px;
+}
+
+/* Estiliza a área de pesquisa */
+.home > div:first-child {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estiliza o campo de input */
+input[type="text"] {
+  width: calc(100% - 120px); /* Ajusta a largura para deixar espaço para o botão */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px; /* Tamanho de fonte para o input */
+  box-sizing: border-box; /* Garante que o padding não aumente a largura do input */
+}
+
+/* Estiliza o botão de pesquisa */
+button {
+  width: 100px;
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #4CAF50; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px; /* Tamanho de fonte para o botão */
+}
+
+button:hover {
+  background-color: #45a049; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estiliza a lista de produtos */
+.home > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaço entre os cartões */
+  justify-content: center; /* Centraliza os cartões na página */
+}
+
+/* Estilização dos cartões dentro da página Home */
+.home {
+  display: flex; /* Utiliza o flexbox para disposição em linha */
+  flex-wrap: wrap; /* Permite que os cartões quebrem para a próxima linha quando necessário */
+  gap: 20px; /* Espaçamento entre os cartões */
+  justify-content: center; /* Alinha os cartões no centro horizontalmente */
+}
+
+.home .card {
+  width: 200px; /* Largura dos cartões */
+  padding: 10px; /* Espaçamento interno */
+  border: 1px solid #ccc; /* Borda */
+  border-radius: 8px; /* Bordas arredondadas */
+  background-color: #fff; /* Cor de fundo */
+  text-align: center; /* Centraliza o conteúdo dentro do cartão */
+}
+
+.home .card img {
+  width: 100%; /* Faz a imagem preencher todo o espaço do cartão */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 4px; /* Bordas arredondadas para a imagem */
+}
+
+.home .card span {
+  display: block; /* Coloca a descrição em uma nova linha */
+  margin-top: 10px; /* Espaçamento superior entre a imagem e a descrição */
+}
