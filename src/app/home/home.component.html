@@ -1,4 +1,12 @@
-<p>test</p>
-<p>teste</p>
 
-<app-card *ngFor="let produto of lista" [item]="produto"></app-card>
+
+<div class="home">
+
+  <div>
+    <input type="text" [(ngModel)]="textoPesquisa">
+    <button (click)="pesquisar()">Pesquisar </button>
+  </div>
+  <div *ngFor="let produto of listaDeProdutosFiltro">
+    <app-card  [item]="produto"></app-card>
+  </div>
+</div>
