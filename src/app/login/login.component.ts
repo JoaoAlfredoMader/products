@@ -22,4 +22,8 @@ export class LoginComponent {
       this.router.navigate(['/home'])
     }
   }
+
+  cadastroRoute() {
+    this.router.navigate(['/cadastro'])
+  }
 }

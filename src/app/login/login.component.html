@@ -1,5 +1,5 @@
 <div class="login">
-  <form (ngSubmit)="entrar()" loginForm="ngForm">
+  <form (ngSubmit)="cadastroRoute()" (ngSubmit)="entrar()" loginForm="ngForm">
     <div>
       <label for="codigoUsuario">Código usuario</label>
       <input
@@ -20,7 +20,7 @@
     </div>
     <div>
       <button type="submit">Entrar</button>
-      <button>Cadastrar</button>
+      <button type="submit">Cadastrar</button>
     </div>
   </form>
 </div>
