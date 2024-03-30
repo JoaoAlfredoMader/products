@@ -1,3 +1,5 @@
+@import './../shared/../../assets/styles/variables';
+
 /* Estilo para o contêiner do formulário de cadastro */
 .cadastro {
   max-width: 400px; /* Largura máxima do formulário */
@@ -34,7 +36,7 @@
 }
 
 .cadastro button[type="submit"] {
-  background-color: #4CAF50; /* Cor de fundo do botão */
+  background-color:$colorPrimary; /* Cor de fundo do botão */
   color: #fff; /* Cor do texto */
 }
 

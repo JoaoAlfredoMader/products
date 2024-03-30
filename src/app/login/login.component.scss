@@ -1,3 +1,5 @@
+@import './../shared/../../assets/styles/variables';
+
 /* Estilização do contêiner de login */
 .login {
   max-width: 400px;
@@ -42,7 +44,7 @@
 
 /* Cor e estilo do botão de Entrar */
 .login button[type="submit"] {
-  background-color: #4CAF50;
+  background-color: $colorPrimary;
   color: white;
 }
 
