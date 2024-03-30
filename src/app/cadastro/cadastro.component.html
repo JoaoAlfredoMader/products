@@ -1,31 +1,54 @@
 <div class="cadastro">
   <form (ngSubmit)="cadastrar()" [formGroup]="form">
     <div>
-      <label for="nome">Nome</label>
+      <label for="nome">Nome *</label>
       <input
       type="text"
       name="nome"
       [formControl]="form.controls.nome"
       >
+      <span *ngIf="
+        form.controls.nome.dirty &&
+        form.controls.nome.touched &&
+        form.controls.nome.errors &&
+        form.controls.nome.errors['required']"
+        >preenchimento obrigatorio
+      </span>
     </div>
     <div class="elementoForm">
-      <label for="codigoUsuario">Codigo usuario</label>
+      <label for="codigoUsuario">Codigo usuario *</label>
       <input
       type="text"
       name="codigoUsuario"
       [formControl]="form.controls.codigoUsuario"
       >
+      <span *ngIf="
+        form.controls.codigoUsuario.dirty &&
+        form.controls.codigoUsuario.touched &&
+        form.controls.codigoUsuario.errors &&
+        form.controls.codigoUsuario.errors['required']"
+        >O código deveconter de 5 a 10 caracteres
+      </span>
+
     </div>
     <div  class="elementoForm">
-      <label for="senha">Senha</label>
+      <label for="senha">Senha *</label>
       <input
       type="password"
       name="senha"
       [formControl]="form.controls.senha"
       >
+      <span *ngIf="">A senha deve conter no min 4 caracteres</span>
+      <span *ngIf="
+        form.controls.senha.dirty &&
+        form.controls.senha.touched &&
+        form.controls.senha.errors &&
+        form.controls.senha.errors['required']"
+        >preenchimento obrigatirio</span>
+
     </div >
     <div  class="elementoForm">
-      <label for="confirmarSenha">Senha</label>
+      <label for="confirmarSenha"> Confirmar Senha *</label>
       <input
       type="password"
       name="senhaUsuario"
