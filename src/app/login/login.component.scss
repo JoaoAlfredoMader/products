@@ -1,5 +1,4 @@
 @import './../shared/../../assets/styles/variables';
-
 /* Estilização do contêiner de login */
 .login {
   max-width: 400px;
@@ -36,25 +35,8 @@
 /* Estiliza os botões */
 .login button {
   padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
   cursor: pointer;
   margin-right: 10px;
 }
 
-/* Cor e estilo do botão de Entrar */
-.login button[type="submit"] {
-  background-color: $colorPrimary;
-  color: white;
-}
 
-/* Cor e estilo do botão de Cadastrar */
-.login button[type="button"] {
-  background-color: #007bff;
-  color: white;
-}
-
-/* Estilo de botão ao passar o mouse por cima */
-.login button:hover {
-  opacity: 0.9;
-}

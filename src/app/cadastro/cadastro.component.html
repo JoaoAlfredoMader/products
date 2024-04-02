@@ -1,4 +1,4 @@
-<div class="cadastro">
+ <div class="cadastro">
   <form (ngSubmit)="cadastrar()" [formGroup]="form">
     <div>
       <label for="nome">Nome *</label>
@@ -8,11 +8,18 @@
       [formControl]="form.controls.nome"
       >
       <span *ngIf="
-        form.controls.nome.dirty &&
-        form.controls.nome.touched &&
+        (form.controls.nome.dirty ||
+        form.controls.nome.touched) &&
         form.controls.nome.errors &&
         form.controls.nome.errors['required']"
         >preenchimento obrigatorio
+      </span>
+      <span *ngIf="
+        (form.controls.nome.dirty ||
+        form.controls.nome.touched) &&
+        form.controls.nome.errors &&
+        form.controls.nome.errors['validaNomeCompleto']"
+        >Insira seu nome completo
       </span>
     </div>
     <div class="elementoForm">
@@ -23,11 +30,11 @@
       [formControl]="form.controls.codigoUsuario"
       >
       <span *ngIf="
-        form.controls.codigoUsuario.dirty &&
+        form.controls.codigoUsuario.dirty ||
         form.controls.codigoUsuario.touched &&
         form.controls.codigoUsuario.errors &&
         form.controls.codigoUsuario.errors['required']"
-        >O código deveconter de 5 a 10 caracteres
+        > código deveconter de 5 a 10 caracteres
       </span>
 
     </div>
@@ -40,11 +47,11 @@
       >
       <span *ngIf="">A senha deve conter no min 4 caracteres</span>
       <span *ngIf="
-        form.controls.senha.dirty &&
+        form.controls.senha.dirty ||
         form.controls.senha.touched &&
         form.controls.senha.errors &&
         form.controls.senha.errors['required']"
-        >preenchimento obrigatirio</span>
+        >preenchimento obrigatorio</span>
 
     </div >
     <div  class="elementoForm">
@@ -54,9 +61,16 @@
       name="senhaUsuario"
       [formControl]="form.controls.confirmarSenha"
       >
+      <span *ngIf="
+      form.controls.confirmarSenha.dirty ||
+      form.controls.confirmarSenha.touched &&
+      form.controls.confirmarSenha.errors &&
+      form.controls.confirmarSenha.errors['required']"
+      >preenchimento obrigatorio</span>
     </div>
-    <div>
-      <button type="submit">Cadastrar</button>
+    <p-toast></p-toast>
+    <div class="botoes-formulario">
+      <button mat-flat-button color="primary" type="submit">Cadastrar</button>
     </div>
   </form>
 </div>

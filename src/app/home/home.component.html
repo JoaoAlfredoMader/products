@@ -4,7 +4,7 @@
 
   <div>
     <input type="text" [(ngModel)]="textoPesquisa">
-    <button (click)="pesquisar()">Pesquisar </button>
+    <button mat-flat-button color="primary" (click)="pesquisar()">Pesquisar </button>
   </div>
   <div *ngFor="let produto of listaDeProdutosFiltro">
     <app-card  [item]="produto"></app-card>
